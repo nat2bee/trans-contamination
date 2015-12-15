@@ -18,3 +18,43 @@ single_entry.py -i *list* -o *output*
 
 **Options:**
 -h for usage help
+
+
+# Find_Contaminant.py
+
+Take a name of species and make a list of all the transcripts blasted with this species
+
+Developed (in my case) to use with the result table from **Annocript** "...filt_ann_out.txt". 
+It will make a list of all the transcripts from the possible contaminant species.
+
+**Usage:**
+Find_Contaminant.py -i *list* -t *table* -o *output*
+
+**Where:** 
+- list = list with all the species name - Taxonomy (one per line)
+- output = the name of the output file to save the transcripts from the contaminants
+- table = table output from **Annocript** "...filt_ann_out.txt" with the species Taxonomy and transcripts IDs
+
+**Options:** 
+-h for usage help
+
+
+# single_transcriptInCluster.py
+
+Check if all the transcripts from a list have any orthologous based on the **Corset** cluster classification.
+
+Developed (in my case) to check if the transcripts from the list were the only isoform in the gene
+cluster resulted from **Corset**. 
+
+**Usage:**
+single_transcriptInCluster.py -i *list* -c *cluster* -o *output*
+
+**Where:** 
+- list = list with all the transcripts to check (one per line)
+- cluster = table result from Corset "...-clusters.txt", where there are the information of clusters and transcripts
+- output = the name of the output file to save the transcripts from a cluster with multiple transcripts
+
+The list of all the transcripts Ids that are the only ones in their clusters is also printed in "singles.txt"
+
+**Options:**
+-h for usage help
