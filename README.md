@@ -58,3 +58,18 @@ The list of all the transcripts Ids that are the only ones in their clusters is 
 
 **Options:**
 -h for usage help
+
+# Find_genes.py
+
+Take a list of genes and find all the transcripts annotated as each gene in you list in the annotation table from **Annocript**.
+
+**Usage:**
+Find_genes.py -i *lis*> -a *annotation* -o *output*
+
+**Where:** 
+- list = list with all the genes to search for (one per line)
+- annotation = table result from Annocript containing the information from annotation (...filt_ann_out.txt)
+- output = the name of the output to save the list of transcripts Ids
+
+**Options:**
+-h for usage help
